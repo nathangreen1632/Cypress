@@ -1,5 +1,93 @@
-{
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
-}
+[
+  {
+    "question": "What does HTML stand for?",
+    "answers": [
+      "HyperText Markup Language",
+      "Hot Mail",
+      "How To Make Lasagna"
+    ],
+    "correctAnswer": "HyperText Markup Language"
+  },
+  {
+      "question": "What does CSS stand for?",
+      "answers": [
+      "Computer Style Sheets",
+      "Cascading Style Sheets",
+      "Crazy Solid Shapes"
+      ],
+      "correctAnswer": "Cascading Style Sheets"
+  },
+  {
+      "question": "What does JS stand for?",
+      "answers": [
+      "Java Style",
+      "Java Script",
+      "Jelly Sandwich"
+      ],
+      "correctAnswer": "Java Script"
+  },
+  {
+      "question": "What does API stand for?",
+      "answers": [
+      "Advanced Programming Interface",
+      "Application Programming Interface",
+      "Automated Programming Interface"
+      ],
+      "correctAnswer": "Application Programming Interface"
+  },
+  {
+      "question": "What does DOM stand for?",
+      "answers": [
+      "Document Object Model",
+      "Data Object Model",
+      "Document Oriented Model"
+      ],
+      "correctAnswer": "Document Object Model"
+  },
+  {
+      "question": "What does HTTP stand for?",
+      "answers": [
+      "HyperText Transfer Protocol",
+      "HyperText Transfer Package",
+      "HyperText Test Protocol"
+      ],
+      "correctAnswer": "HyperText Transfer Protocol"
+  },
+  {
+      "question": "What does URL stand for?",
+      "answers": [
+      "Uniform Resource Locator",
+      "Uniform Resource Link",
+      "Uniform Resource Language"
+      ],
+      "correctAnswer": "Uniform Resource Locator"
+  },
+  {
+      "question": "What does SQL stand for?",
+      "answers": [
+      "Stylish Query Language",
+      "Structured Query Language",
+      "Standard Query Language"
+      ],
+      "correctAnswer": "Structured Query Language"
+  },
+  {
+      "question": "What does AI stand for?",
+      "answers": [
+      "Artificial Intelligence",
+      "American Idol",
+      "Aliens Invasion"
+      ],
+      "correctAnswer": "Artificial Intelligence"
+  },
+  {
+      "question": "What does UX stand for?",
+      "answers": [
+      "User Experience",
+      "User Xperience",
+      "User Experiences"
+      ],
+      "correctAnswer": "User Experience"
+  }
+]
+
