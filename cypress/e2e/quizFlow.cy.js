@@ -5,34 +5,33 @@ describe('Quiz Application E2E Test', () => {
     });
 
     it('should start the quiz and display the first question', () => {
-        cy.contains('Start Quiz').click();
+        cy.get('[data-cy="start-quiz"]').click();
         cy.wait('@getQuestions');
 
-        cy.get('[data-testid="question"]', { timeout: 5000 }).should('contain.text', 'What does HTML stand for?');
+        cy.get('[data-cy="question"]', { timeout: 6000 }).should('contain.text', 'What does HTML stand for?');
     });
 
     it('should answer all questions and show score screen', () => {
-        cy.contains('Start Quiz').click();
+        cy.get('[data-cy="start-quiz"]').click();
         cy.wait('@getQuestions');
 
-        // Answer all 10 questions (or 2 if that's all you have)
-        for (let i = 0; i < 2; i++) {
-            cy.get('[data-testid="answer-button"]').first().click();
+        for (let i = 0; i < 10; i++) {
+            cy.get('[data-cy="answer-button"]').first().click();
         }
 
-        cy.get('[data-testid="score-display"]').should('be.visible');
+        cy.get('[data-cy="score-display"]').should('be.visible');
     });
 
     it('should allow restarting the quiz', () => {
-        cy.contains('Start Quiz').click();
+        cy.get('[data-cy="start-quiz"]').click();
         cy.wait('@getQuestions');
 
-        for (let i = 0; i < 2; i++) {
-            cy.get('[data-testid="answer-button"]').first().click();
+        for (let i = 0; i < 10; i++) {
+            cy.get('[data-cy="answer-button"]').first().click();
         }
 
-        cy.get('[data-testid="restart-button"]').click();
+        cy.get('[data-cy="restart-quiz"]').click();
 
-        cy.get('[data-testid="question"]').should('contain.text', 'What does HTML stand for?');
+        cy.get('[data-cy="question"]').should('contain.text', 'What does HTML stand for?');
     });
 });
