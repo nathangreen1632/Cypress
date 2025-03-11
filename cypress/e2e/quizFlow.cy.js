@@ -7,8 +7,9 @@ describe('Quiz Application E2E Test', () => {
     it('should start the quiz and display the first question', () => {
         cy.get('[data-cy="start-quiz"]').click();
         cy.wait('@getQuestions');
-
-        cy.get('[data-cy="question"]', { timeout: 6000 }).should('contain.text', 'What does HTML stand for?');
+        cy.get('[data-cy="question"]')
+            .should('be.visible')
+            .and('contain.text', 'What is the output of print(2 ** 3)?'); // matches mockData.json[0]
     });
 
     it('should answer all questions and show score screen', () => {
@@ -16,7 +17,7 @@ describe('Quiz Application E2E Test', () => {
         cy.wait('@getQuestions');
 
         for (let i = 0; i < 10; i++) {
-            cy.get('[data-cy="answer-button"]').first().click();
+            cy.get('[data-cy="answer-button"]').random().click();
         }
 
         cy.get('[data-cy="score-display"]').should('be.visible');
@@ -27,11 +28,15 @@ describe('Quiz Application E2E Test', () => {
         cy.wait('@getQuestions');
 
         for (let i = 0; i < 10; i++) {
-            cy.get('[data-cy="answer-button"]').first().click();
+            cy.get('[data-cy="answer-button"]').random().click();
         }
 
         cy.get('[data-cy="restart-quiz"]').click();
+        cy.wait('@getQuestions');
 
-        cy.get('[data-cy="question"]').should('contain.text', 'What does HTML stand for?');
+        cy.get('[data-cy="question"]')
+            .should('be.visible')
+            .and('contain.text', 'What is the output of print(2 ** 3)?');
     });
+
 });
