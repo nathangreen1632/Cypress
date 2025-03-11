@@ -161,10 +161,11 @@ Each question includes:
 ## 📹 Walkthrough Video
 
 🎬 **Watch the full test demonstration:**
-> [Walkthrough Video Link – Insert here when ready]
+> [Walkthrough Video](https://youtu.be/BD_h4o5DX98)
 
 This video includes:
 - Launching the server and client
+- Navigating to the quiz
 - Opening Cypress
 - Running all component and E2E tests
 - Showing that all tests pass ✅
