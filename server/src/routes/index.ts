@@ -1,6 +1,6 @@
-import type { Request, Response } from 'express';
+import type {Request, Response, Router} from 'express';
 import express from 'express';
-const router = express.Router();
+const router: Router = express.Router();
 
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
