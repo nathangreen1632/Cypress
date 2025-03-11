@@ -14,7 +14,6 @@ const mockQuestions = Array.from({ length: 10 }).map((_, i) => ({
 
 describe('<Quiz /> - Component Test', () => {
   beforeEach(() => {
-    // Inject mock data directly through props
     mount(<Quiz testQuestions={mockQuestions} />);
   });
 
