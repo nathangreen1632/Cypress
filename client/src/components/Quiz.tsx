@@ -15,13 +15,11 @@ const Quiz = ({ testQuestions }: QuizProps) => {
 
   const getRandomQuestions = async () => {
     try {
-      // ⬇️ If testQuestions are provided (e.g. in component test), use those
       if (testQuestions && testQuestions.length > 0) {
         setQuestions(testQuestions);
         return;
       }
 
-      // ⬇️ Otherwise fetch from your API as usual
       const fetched = await getQuestions();
       if (!fetched) {
         throw new Error('something went wrong!');
